@@ -15,22 +15,16 @@ public class Day4 {
         Path fileName = Path.of("src/com/adventofcode/Day4/input.txt");
         List<String> actual = Files.readAllLines(fileName);
         List<Integer> draw = getDraw(actual);
-
-        List<Integer> L1 = lineToListOfInts(actual.get(2).split(" "));
-
         int numberOfCards = (actual.size() - 1) / 6;
 
         List<Card> cards = new ArrayList<>();
-
         for (int i=0; i<numberOfCards;i++) {
             cards.add(getCard(actual, i));
         }
-        List<Card> originalValues = new ArrayList<>();
-        originalValues.addAll(cards);
 
         draw.stream().forEach(value -> {
             cards.forEach(card -> card.markValue(value));
-            cards.removeIf(card -> checkWinner(card, value) == true);
+            cards.removeIf(card -> checkWinner(card, value));
         });
 
     }
