@@ -46,5 +46,5 @@ public class Day6 {
         lanternFish.set(6, lanternFish.get(6) + doublingFish);
         lanternFish.set(8, doublingFish);
     }
-    
+
 }
