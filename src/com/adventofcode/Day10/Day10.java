@@ -23,7 +23,7 @@ public class Day10 {
     private static final List<String> unexpected = new ArrayList<>();
     private static final List<List<String>> incomplete = new ArrayList<>();
     private static final List<Long> incompleteTotals = new ArrayList<>();
-    
+
     public static void main(String[] args) throws IOException {
         Path fileName = Path.of("src/com/adventofcode/Day10/input.txt");
         List<List<String>> actual = Files.readAllLines(fileName).stream()
