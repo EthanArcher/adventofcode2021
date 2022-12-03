@@ -144,7 +144,7 @@ public class Day18 {
             valueAndDepths.forEach(vd -> vd.setDepth(vd.getDepth()+1));
         }
     }
-    
+
     private static class ValueAndDepth {
         private int value;
         private int depth;
